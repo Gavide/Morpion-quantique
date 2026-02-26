@@ -1,0 +1,8 @@
+qiskit
+qiskit-aer
+networkx
+matplotlib
+streamlit
+numpy
+plotly
+pathlib
