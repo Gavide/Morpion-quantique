@@ -42,13 +42,15 @@ Each move places a piece in **quantum superposition** across N cells simultaneou
 ## Getting Started
 
 ### Copy and paste this in the shell
+```bash
+
 git clone https://github.com/Gavide/Morpion-quantique.git
 cd Morpion-quantique
 python -m venv env #macOS / Linux: python -m venv env
 .\env\Scripts\activate #macOS / Linux: source env/bin/activate
 pip install -r requirements.txt
 streamlit run app/app.py
-
+```
 
 The app will open automatically at `http://localhost:8501`.
 
