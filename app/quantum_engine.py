@@ -160,7 +160,7 @@ def init_quantum_9q():
 def get_circuit_ascii(circuit_global):
     """
     Retourne la représentation ASCII du circuit Qiskit,
-    exactement comme dans le notebook de l'ami (draw output='text').
+    exactement comme dans le notebook (draw output='text').
     """
     try:
         return str(circuit_global.draw(output='text'))
@@ -230,7 +230,7 @@ def jouer_coup_quantum_9q(plateau, marques_q, circuit_global, joueur, case1, cas
     q1 = case_to_qubit(*case1)
     q2 = case_to_qubit(*case2)
 
-    # Gate sequence identique au notebook de l'ami
+    # Gate sequence identique au notebook
     circuit_global.h(q1)
     circuit_global.cx(q1, q2)
     circuit_global.x(q2)
@@ -725,7 +725,7 @@ def choisir_coup_random(plateau, marques_q, limite_N=2, trigger_sat=False):
 
 
 # ═══════════════════════════════════════════════════════════
-# TOURNOI ELO (du notebook de l'ami — cell 103)
+# TOURNOI ELO (du notebook — cell 103)
 # ═══════════════════════════════════════════════════════════
 
 def calculer_elo(ratings, ia1, ia2, resultat, k=64):

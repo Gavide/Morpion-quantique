@@ -26,6 +26,6 @@ def show():
         _afficher_pdf("rapport.pdf")
     with t3:
         st.markdown("#### Membres du projet")
-        st.write("Thomas BELLEVILLE, Valentine GASNIER, David WANG, Thomas BELLEVILLE")
+        st.write("Thomas BELLEVILLE, Valentine GASNIER, Eva TAVARES, David WANG")
         st.markdown("#### Professeur")
         st.write("M. Breuil")

@@ -161,10 +161,13 @@ def winner_banner(winner):
 
 
 def replay_button():
-    if st.button("NOUVELLE PARTIE", use_container_width=True, type="primary"):
+    if st.button("REJOUER", use_container_width=True, type="primary"):
         keep = ['p1_name', 'p2_name', 'p1_color', 'p2_color', 'p1_url', 'p2_url',
-                'ia_algo', 'ia_joueur_commence', 'ia_x_algo', 'ia_o_algo', 'tournoi_n']
+                'ia_algo', 'ia_joueur_commence', 'ia_x_algo', 'ia_o_algo',
+                'tournoi_n', 'limite_N', 'trigger_sat', 'trigger_cyc', 'page']
         kept = {k: st.session_state[k] for k in keep if k in st.session_state}
         st.session_state.clear()
         st.session_state.update(kept)
+        # Restaurer active_player selon qui devait commencer
+        st.session_state.active_player = 1 if kept.get('ia_joueur_commence', True) else -1
         st.rerun()

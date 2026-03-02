@@ -113,6 +113,10 @@ def _panel_ia():
         lo = st.selectbox("IA O", list(IA_OPTIONS.keys()), index=1, key="sel_iao")
         st.session_state.ia_o_algo = IA_OPTIONS[lo]
     if st.button(btn("LANCER IA vs IA", 2), use_container_width=True):
+        # Nommer les joueurs d'après leurs algos pour l'historique
+        IA_LABELS = {"random":"Random","grover":"Grover","qaoa":"QAOA","minimax_q":"Minimax Q"}
+        st.session_state.p1_name = IA_LABELS.get(st.session_state.get("ia_x_algo","random"), "IA X")
+        st.session_state.p2_name = IA_LABELS.get(st.session_state.get("ia_o_algo","grover"), "IA O")
         st.session_state.page = "JEU_IA_VS_IA"; st.rerun()
 
     st.divider()

@@ -22,7 +22,8 @@ def display_psi(marques_q):
     lignes = []
     for entry in reversed(history):
         color  = p1c if entry['joueur'] == 1 else p2c
-        sym    = entry['sym']
+        # Recalculer le sym depuis la valeur joueur pour éviter tout décalage
+        sym    = "○" if entry['joueur'] == 1 else "✕"
         nom    = entry['nom']
         cases  = entry['cases']
         barre  = entry.get('barre', False)
